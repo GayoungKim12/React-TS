@@ -52,4 +52,4 @@ const Flex = React.forwardRef<HTMLDivElement, FlexProps>(({ className, direction
   return <Comp className={cn(flexVariants({ className, direction, gap, items, justify }))} ref={ref} {...props} />;
 });
 
-export default Flex;
+export { Flex, flexVariants };
