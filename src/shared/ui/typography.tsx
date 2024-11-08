@@ -22,7 +22,7 @@ const typographyVariants = cva("", {
       inherit: "text-inherit",
       xs: "text-xs",
       sm: "text-sm",
-      base: "text-base",
+      md: "text-base",
       lg: "text-lg",
       xl: "text-xl",
       "2xl": "text-2xl",
@@ -57,7 +57,7 @@ const typographyVariants = cva("", {
   },
   defaultVariants: {
     component: "p",
-    size: "base",
+    size: "md",
     weight: "normal",
     align: "left",
     color: "default",

@@ -2,6 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
+import { AlignItems, FlexDirection, FlexDisplay, FlexGap, JustifyContens } from "../types/components/flex.types";
 
 const flexVariants = cva("items-center justify-center", {
   variants: {
@@ -11,15 +12,22 @@ const flexVariants = cva("items-center justify-center", {
     },
     direction: {
       col: "flex-col",
-      default: "flex-row",
+      row: "flex-row",
     },
     gap: {
-      default: "gap-4",
+      xs: "gap-1",
       sm: "gap-2",
+      md: "gap-4",
       lg: "gap-6",
       xl: "gap-8",
-      "2xl": "gap-12",
-      "3xl": "gap-16",
+      "2xl": "gap-10",
+      "3xl": "gap-12",
+      "4xl": "gap-14",
+      "5xl": "gap-16",
+      "6xl": "gap-18",
+      "7xl": "gap-20",
+      "8xl": "gap-24",
+      "9xl": "gap-28",
     },
     items: {
       center: "items-center",
@@ -37,8 +45,8 @@ const flexVariants = cva("items-center justify-center", {
   },
   defaultVariants: {
     display: "default",
-    direction: "default",
-    gap: "default",
+    direction: "row",
+    gap: "md",
     items: "center",
     justify: "center",
   },
@@ -46,16 +54,18 @@ const flexVariants = cva("items-center justify-center", {
 
 interface FlexProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof flexVariants> {
   asChild?: boolean;
-  display?: "default" | "inline";
-  direction?: "default" | "col";
-  gap?: "default" | "sm" | "lg" | "xl" | "2xl" | "3xl";
-  items?: "center" | "start" | "end" | "stretch";
-  justify?: "center" | "start" | "between" | "end" | "evenly";
+  display?: FlexDisplay;
+  direction?: FlexDirection;
+  gap?: FlexGap;
+  items?: AlignItems;
+  justify?: JustifyContens;
 }
 
 const Flex = React.forwardRef<HTMLDivElement, FlexProps>(({ className, display, direction, gap, items, justify, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "div";
   return <Comp className={cn(flexVariants({ className, display, direction, gap, items, justify }))} ref={ref} {...props} />;
 });
+
+Flex.displayName = "Flex";
 
 export { Flex, flexVariants };
