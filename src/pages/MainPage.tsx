@@ -1,8 +1,7 @@
 import { Flex } from "@/components/ui/flex";
 import { Typography } from "@/components/ui/typography";
 
-
-const MainPage = () => {
+export default function MainPage() {
   return (
     <Flex>
       <Flex className="mt-12" asChild>
@@ -14,6 +13,4 @@ const MainPage = () => {
       </Flex>
     </Flex>
   );
-};
-
-export default MainPage;
+}

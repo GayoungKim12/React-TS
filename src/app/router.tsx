@@ -1,14 +1,13 @@
 import ButtonPage from "@/pages/ButtonPage";
 import MainPage from "@/pages/MainPage";
 import { Route, Routes } from "react-router-dom";
+import Layout from "./layout";
 
-const AppRouter = () => {
+export default function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/button" element={<ButtonPage />} />
     </Routes>
   );
-};
-
-export default AppRouter;
+}
