@@ -6,8 +6,10 @@ import Layout from "./layout";
 export default function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/button" element={<ButtonPage />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/button" element={<ButtonPage />} />
+      </Route>
     </Routes>
   );
 }
