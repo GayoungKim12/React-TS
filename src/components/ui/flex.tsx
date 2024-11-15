@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
-import { AlignItems, FlexDirection, FlexDisplay, FlexGap, JustifyContens } from "../types/components/flex.types";
+import { AlignItems, FlexDirection, FlexDisplay, FlexGap, JustifyContens } from "../../shared/types/components";
 
 const flexVariants = cva("items-center justify-center", {
   variants: {

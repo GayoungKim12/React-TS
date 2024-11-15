@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot";
-import { TextAlign, TextColor, TextSize, TypographyElement, Weight } from "../types/components/typography.types";
+import { TextAlign, TextColor, TextSize, TypographyElement, Weight } from "../types/components";
 
 const typographyVariants = cva("", {
   variants: {

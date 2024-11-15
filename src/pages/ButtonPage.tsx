@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Flex } from "@/shared/ui/flex";
-import { Button } from "@/shared/ui/button";
+import { Flex } from "@/components/ui/flex";
+import { Button } from "@/components/ui/button";
 
 /* const styles = ; */
 
