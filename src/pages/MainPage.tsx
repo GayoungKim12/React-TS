@@ -1,5 +1,5 @@
-import { Flex } from "@/components/ui/flex";
-import { Typography } from "@/components/ui/typography";
+import { Flex } from "@/shared/components/ui/layout/flex";
+import { Typography } from "@/shared/components/ui/typography/typography";
 
 export default function MainPage() {
   return (
