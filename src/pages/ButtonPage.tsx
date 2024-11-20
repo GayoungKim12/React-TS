@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Flex } from "@/shared/components/ui/layout/flex";
-import { Button } from "@/shared/components/ui/button";
 
 /* const styles = ; */
+import { Button } from "@/shared/components/ui/button/button";
 
 const ButtonPage = () => {
   const [clickedBtn, setClickedBtn] = useState("???");
