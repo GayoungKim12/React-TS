@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Flex } from "@/shared/components/ui/layout/flex";
-
-/* const styles = ; */
 import { Button } from "@/shared/components/ui/button/button";
 
 const ButtonPage = () => {
