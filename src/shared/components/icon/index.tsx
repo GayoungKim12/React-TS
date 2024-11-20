@@ -7,8 +7,11 @@ interface IconProps extends React.ComponentPropsWithoutRef<LucideIcon> {
   name: IconName;
 }
 
-export default function Icon({ name, ...props }: IconProps) {
+function Icon({ name, ...props }: IconProps) {
   const IconComponent = Icons[name] as LucideIcon;
 
   return <IconComponent {...props} />;
 }
+
+export { Icon };
+export type { IconName };
