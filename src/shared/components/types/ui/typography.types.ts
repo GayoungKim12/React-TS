@@ -5,3 +5,4 @@ export type TextSize = "inherit" | Size;
 export type Weight = "light" | "normal" | "medium" | "semibold" | "bold" | "extrabold";
 export type TextAlign = "left" | "center" | "right";
 export type TextColor = Color;
+export type Font = "default" | "zcool";
