@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/shared/lib/utils/form-utils";
 import { Slot } from "@radix-ui/react-slot";
-import { TextAlign, TextColor, TextSize, TypographyElement, Weight } from "../../types/ui";
+import { Font, TextAlign, TextColor, TextSize, TypographyElement, Weight } from "../../types/ui";
 
 const typographyVariants = cva("", {
   variants: {
@@ -54,6 +54,10 @@ const typographyVariants = cva("", {
       secondary: "text-secondary",
       destructive: "text-destructive",
     },
+    font: {
+      zcool: "font-zcool",
+      default: "font-default",
+    },
   },
   defaultVariants: {
     component: "p",
@@ -61,6 +65,7 @@ const typographyVariants = cva("", {
     weight: "normal",
     align: "left",
     color: "default",
+    font: "default",
   },
 });
 
@@ -71,9 +76,10 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement>, Va
   weight?: Weight;
   align?: TextAlign;
   color?: TextColor;
+  font?: Font;
 }
 
-const Typography = React.forwardRef<HTMLParagraphElement, TypographyProps>(({ className, size, weight, align, color, component, asChild = false, ...props }, ref) => {
+const Typography = React.forwardRef<HTMLParagraphElement, TypographyProps>(({ className, size, weight, align, color, component, asChild = false, font, ...props }, ref) => {
   const Comp = asChild ? Slot : "p";
 
   return (
@@ -86,6 +92,7 @@ const Typography = React.forwardRef<HTMLParagraphElement, TypographyProps>(({ cl
           align,
           color,
           className,
+          font,
         })
       )}
       ref={ref}
