@@ -48,7 +48,7 @@ const typographyVariants = cva("", {
       center: "text-center",
       right: "text-right",
     },
-    color: {
+    type: {
       default: "text-foreground",
       muted: "text-muted-foreground",
       primary: "text-primary",
@@ -66,7 +66,7 @@ const typographyVariants = cva("", {
     size: "md",
     weight: "normal",
     align: "left",
-    color: "default",
+    type: "default",
     font: "default",
   },
 });
@@ -77,11 +77,11 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement>, Va
   size?: TextSize;
   weight?: Weight;
   align?: TextAlign;
-  color?: TextColor;
+  type?: TextColor;
   font?: Font;
 }
 
-const Typography = React.forwardRef<HTMLParagraphElement, TypographyProps>(({ className, size, weight, align, color, component, asChild = false, font, ...props }, ref) => {
+const Typography = React.forwardRef<HTMLParagraphElement, TypographyProps>(({ className, size, weight, align, type, component, asChild = false, font, ...props }, ref) => {
   const Comp = asChild ? Slot : "p";
 
   return (
@@ -92,7 +92,7 @@ const Typography = React.forwardRef<HTMLParagraphElement, TypographyProps>(({ cl
           size,
           weight,
           align,
-          color,
+          type,
           className,
           font,
         })
