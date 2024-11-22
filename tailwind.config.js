@@ -5,8 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        zcool: ["ZCOOL KuaiLe", "cursive"],
         default: ["NotoSansKR", "Geist", "system-ui", "sans-serif"],
+        mono: ["CodeNewRoman", "monospace"],
+        zcool: ["ZCOOL KuaiLe", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",
