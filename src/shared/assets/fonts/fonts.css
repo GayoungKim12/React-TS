@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
+/* Code New Roman */
+@font-face {
+  font-family: "CodeNewRoman";
+  src: url("./CodeNewRoman/CodeNewRoman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CodeNewRoman";
+  src: url("./CodeNewRoman/CodeNewRomanb.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CodeNewRoman";
+  src: url("./CodeNewRoman/CodeNewRomani.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
