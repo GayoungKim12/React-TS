@@ -8,15 +8,16 @@ const typographyVariants = cva("", {
   variants: {
     component: {
       h1: "scroll-m-20 tracking-tight",
-      h2: "scroll-m-20 border-b pb-2 tracking-tight first:mt-0",
+      h2: "scroll-m-20 tracking-tight first:mt-0",
       h3: "scroll-m-20 tracking-tight",
       h4: "scroll-m-20 tracking-tight",
-      p: "leading-7 [&:not(:first-child)]:mt-6",
+      p: "leading-7",
       ul: "my-6 ml-6 list-disc [&>li]:mt-2",
       ol: "my-6 ml-6 list-decimal [&>li]:mt-2",
       a: "underline underline-offset-4",
       blockquote: "mt-6 border-l-2 pl-6 italic",
-      code: "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono",
+      code: "relative rounded bg-muted px-[0.3rem] py-[0.2rem]",
+      pre: "relative rounded bg-muted px-[0.3rem] py-[0.2rem]",
     },
     size: {
       inherit: "text-inherit",
@@ -55,8 +56,9 @@ const typographyVariants = cva("", {
       destructive: "text-destructive",
     },
     font: {
-      zcool: "font-zcool",
       default: "font-default",
+      mono: "font-mono",
+      zcool: "font-zcool",
     },
   },
   defaultVariants: {

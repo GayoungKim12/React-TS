@@ -15,7 +15,7 @@ const flexVariants = cva("items-center justify-center", {
       row: "flex-row",
     },
     gap: {
-      xs: "gap-1",
+      xs: "gap-0",
       sm: "gap-2",
       md: "gap-4",
       lg: "gap-6",
